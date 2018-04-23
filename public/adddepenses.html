@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <title>nouveautricounttricount</title>
+    </head>
+    <body>
+    <div class=" bg-warning jumbotron" style="min-height: 40px;">
+    <div class="container">
+      <button type="button" class="close" aria-label="Close" id="sortir_adddepense">
+      <span aria-hidden="false">&times;</span>
+    </button>
+      <h4 class="text-black text-center"> Ajouter une dépense</h4>
+    </div>
+    </div>
+
+    <div class="col-sm-9">
+      <form>
+        <div class="form-group">
+          <label for="montant">Article avancé</label>
+              <input type="text" list='choix_item' id="article_choisi" class="form-control"></input>
+              <datalist id="choix_item"></datalist>
+          </div>
+          <div class="form-group">
+              <label for="exampleFormControlSelect1">Selectionner l'utilisateur que vous avez avancé</label>
+              <input type="text" class="form-control but" list='choix_user' name="users" id="choix_login" placeholder="users"></input>
+                <datalist id='choix_user'></datalist>
+            </div>
+              <div class="float-right">
+                <button type="button" class="btn btn-primary" id="add_part">Add participant</button>
+              </div>
+        </div>
+
+        <button type="submit" class="mt-5 btn btn-info" id="add_depe">Submit</button>
+      </form>
+
+      <script type="text/javascript" src="./adddepense.js">
+
+      </script>
+
+
+</body>
+</html>

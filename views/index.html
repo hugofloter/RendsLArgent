@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Rends l'Argent</title>
+  </head>
+<body>
+
+<input type='hidden' id='username' value='{{ username }}'>
+
+<input type="hidden" id='mail' value="{{ mail }}">
+<input type="hidden" id='name' value="{{ name }}">
+<nav class="navbar fixed-top navbar-dark bg-dark" style="height: 50px;">
+      <div class="container">
+        <div class="navbar-header col-xs-9">
+          <a class="navbar-brand" href="#" data-original-title="" title=""><img width="45" height="45" src="/src/tamere.png" alt="payutc">
+            <span> RendsLargent</span></a>
+            <a href="https://cas.utc.fr/cas/login?service=http://vps528307.ovh.net:3001/login">Login</a>
+        </div>
+        <div class="navbar-header col-xs-3">
+                    <p class="navbar-text navbar-right"><a href="https://cas.utc.fr/cas/logout" data-original-title="" title="">Déconnexion</a></p>
+        </div>
+      </div>
+</nav>
+
+
+  <div class=" bg-warning jumbotron jumbotron-fluid">
+    <div class="container">
+        <div class="row">
+        <div cass="col-sm-8">
+          <h1 class="display-4"> Bienvenue sur RendsLargent</h1>
+          <p class="lead" id="Bienvenue"></p>
+        <!--  <p class=" lead text-danger">T'es en négatif , hésite  pas à rembourser les potos</p>-->
+        <h4 id="money"></h4>
+        <h3 id="ossap"></h3>
+        </div>
+        <div class="col-sm-4">
+          <img src="/src/tamere.png" width="150" height="150"  alt="L4IMAGE">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+        <button type="button" class="btn btn-info" id="Ajout_Rendslargent">Ajoute un tricount frero</button>
+
+        <form class="form-inline my-2 my-lg-0" id="search_rendslargent">
+             <input class="form-control mt-2 mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      <div class="list-group">
+        <div class="row mt-2">
+          <div class="col-sm-6">
+            <div id="choix_rendslargent">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="col-sm-8 ajout">
+        <div id="cacher">
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">DEPENSES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">BALANCES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">STATISTIQUES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="contact-tab" data-toggle="tab" href="#modifier" role="tab" aria-controls="contact" aria-selected="false">GERER</a>
+            </li>
+          </ul>
+
+
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+              <div class="col-sm">
+              <table class="table table-striped" id="depense_resume">
+                <tbody>
+                </tbody>
+              </table>
+
+    <div class="mx-auto" style="width: 200px;">
+
+    <nav aria-label=" Page navigation example">
+      <ul class="pagination" id="paging" max-size='3'>
+
+
+      </ul>
+      <button class="btn btn-primary ml-5 " id="Ajout_depense">Ajouter une dépense</button>
+    </nav>
+    </div>
+
+    </div>
+
+            </div>
+
+
+
+            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+              <ul class="nav nav-tabs" id="myTab2" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" id="home-tab" data-toggle="tab" href="#homm" role="tab" aria-controls="home" aria-selected="true">Qui doit quoi</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contacc" role="tab" aria-controls="contact" aria-selected="false">Résumé des transactions</a>
+                </li>
+              </ul>
+
+            <div class="tab-content" id="myTabContent2b">
+
+              <div class="tab-pane fade show active" id="homm" role="tabpanel" aria-labelledby="hom-tab">
+                <table class="table table-striped dieu" id="balance_rendslargent">
+                <tbody>
+                </tbody>
+                </table>
+              </div>
+
+              <div class="tab-pane fade" id="contacc" role="tabpanel" aria-labelledby="homd-tab">
+                <table class="table table-striped dieu" id="resume_transactions">
+                <tbody>
+                </tbody>
+                </table>
+
+              </div>
+            </div>
+
+
+
+            </div>
+
+
+            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+
+
+              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" id="home-tab" data-toggle="tab" href="#hom" role="tab" aria-controls="home" aria-selected="true">Lové</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profil" role="tab" aria-controls="profile" aria-selected="false">le meilleur codeur  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contac" role="tab" aria-controls="contact" aria-selected="false">le plus beau</a>
+                </li>
+              </ul>
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="hom" role="tabpanel" aria-labelledby="hom-tab"> Sanji ne crois pas que je t'aime </div>
+                <div class="tab-pane fade" id="profil" role="tabpanel" aria-labelledby="profil-tab">Axel bien sur </div>
+                <div class="tab-pane fade" id="contac" role="tabpanel" aria-labelledby="contac-tab"> hugo bien sur </div>
+              </div>
+
+
+            </div>
+
+            <div class="tab-pane fade" id="modifier" role="tabpanel" aria-labelledby="profile-tab">
+              <button type="button" class="btn btn-info btn-lg btn-block" id="add_articleexte">Ajouter un article pour le tricount</button>
+              <button type="button" class="btn btn-info btn-lg btn-block" id="add_usertorendsl">Ajouter un particpant</button>
+              <button type="button" class="btn btn-dark btn-lg btn-block" id="set_param">Modifier les paramètre personnel du rendslargent</button>
+              <button type="button" class="btn btn-danger btn-lg btn-block" id="suppr_rendsl">Supprimer le Rendslargent définitivement</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+      <div class="container mt-5 text-center">
+    <div class="dropdown">
+      <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="rere">
+        Demandes de remboursement
+      </a>
+
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="liste_dette">
+      </div>
+    </div>
+    </div>
+<div class="container mt-5 text-center">
+          <a href="#" class="btn btn-info btn-lg" id="refresh">
+            <span class="glyphicon glyphicon-refresh"></span> Refresh
+          </a>
+</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+            <div class="footer" style="
+                  margin-top: 1em;
+                  padding-top: 1em;
+                  color: #777;
+                  border-top: 1px solid #e5e5e5;
+                  text-align: center;"
+                }>
+                <p>Crée par les <u>Chiens des Islas</u> <span class="ossap1">Hugo Paigneau</span>, Quentin Richard, <span class='ossap1'>Axel Dupart</span>, Antoine Courdavault, Valentin Rolinat</p>
+            </div>
+        </div>
+
+      <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+
+      <script src="./script.js"></script>
+      <script src="./reload.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+  </html>
