@@ -510,6 +510,6 @@ $.getScript("./reload.js");*/
 setTimeout(function(){
 $(document).on('click','p',function(){
   console.log("Ossapik")
-  $('#ossap').text("Ossapik reigne en maître sur Compiègne")
+  $('#ossap').text("Ossapik règne en maître sur Compiègne")
 });
 }, 1500)
