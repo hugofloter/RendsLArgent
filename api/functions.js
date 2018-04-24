@@ -23,6 +23,10 @@ const mySqlConnection = mysql.createConnection({
   database: config.BDD
 });
 
+setInterval(function () {
+    mySqlConnection.query('SELECT 1');
+}, 5000);
+
 var exports = module.exports = {
   users : {},
   rendslargent : {},
