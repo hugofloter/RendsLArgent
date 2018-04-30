@@ -35,6 +35,7 @@ var exports = module.exports = {
 
 
 
+
 //USERS FUNCTIONS
 exports.users.createUser = (user_nom, user_prenom, user_mail, success, error, user_login='guest')=>{
   exports.users.getUserByLogin(user_login,
